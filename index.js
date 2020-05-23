@@ -62,4 +62,74 @@ console.log(`coalescing: ${0 ?? 'default'}`); // coalescing operator not null/ n
 
 console.log('-----------------');
 
+// ------------------------------------------------- o ------------------------------------------------
+
 // Promises
+
+/* Promises in JS are like promises in real life, you either
+ keep your word or you break the promise
+
+ in JS
+ - keep my word => promise is resolved
+ - break my promise => promise is rejected
+ - truthy !== undefined, null, false
+*/
+let value = true;
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => (value ? resolve("Good, it's resolved") : reject('Too bad')), 5000);
+  // if (value) resolve("Good, it's resolved");
+  // else reject('Too bad');
+});
+
+const myPromise1 = new Promise((resolve, reject) => {
+  setTimeout(() => (value ? resolve("Good, it's resolved") : reject('Too bad')), 5000);
+  // if (value) resolve("Good, it's resolved");
+  // else reject('Too bad');
+});
+
+Promise.all([myPromise, myPromise1]).then((responses) => console.log(responses));
+Promise.race([myPromise, myPromise1]).then();
+
+value = true;
+console.log('test');
+
+myPromise.then((response) => {
+  let res = response;
+  if (res == 'one string') console.log(res);
+});
+
+// ES6 async / await
+
+const myAsyncPromise = async () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => (value ? resolve("Good, it's resolved") : reject('Too bad')), 5000);
+  });
+};
+
+const resolvePromise = async () => {
+  let myVal = await myAsyncPromise();
+  console.log(myVal);
+  true ? console.log('y') : console.log('f');
+};
+
+resolvePromise();
+
+// assumiung we have PO ==> async /await
+//Login page
+async function login(username, password) {
+  return new Dashboard();
+}
+
+const dashboard = await login();
+await dashboard.showCritical();
+
+// .then
+function login(username, password) {
+  return new Promise((resolve) => resolve(new Dashboard()));
+}
+
+let val = null;
+
+login().then((dashboard) => {
+  dashboard.showCritical().then((criticals) => criticals.then());
+});
