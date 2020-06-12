@@ -5,6 +5,8 @@ let name = 'Pepe';
 name = 'Jose';
 const numbers = [1, 2, 3];
 
+// More comments
+
 // arrow functions
 const reverseWord = (word) => word.split('').reverse().join('');
 
