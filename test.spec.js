@@ -1,6 +1,8 @@
 /// <reference types="Cypress" />
 
 describe('test', () => {
+
+  // This is a comment
   it('test1', () => {
     cy.get('.critical-alerts-content').then((alerts) => {
       const mitreAttacks = alerts.toArray().map((alert) => alert.find('.attack-categories'));
