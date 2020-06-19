@@ -1,8 +1,12 @@
+Here's another commit line
+for testing purposes
+
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
 Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
 In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. 
 Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. 
- 
+I just needed to make a change here, I didn't like these lines that make no sense at all.
+So I deleted them and put these ones which are much better!!!
 
 Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. 
 Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
